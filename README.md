@@ -42,10 +42,8 @@ To counter the data imbalance, I calculated the class weights the models could u
 ## Training and results
 The machine learning models used for binary classification were _Logistic Regression_, _K Nearest Neighbours_, _Support Vector Machines_, and _Naive Bayes_ for the classical models, and _LSTM_, and _DistilBert_ for the neural models. As _Naive Bayes_ is a [poor estimator](https://scikit-learn.org/stable/modules/naive_bayes.html) due to its nature to take on each feature independent on one another (in our case every word in a profile text), and its error analysis revealed that save for two entries, all of its mistakes were made by attributing profile texts wrongfully to the majority class, I did not include its performance in the table below.
 
-
 | | LogReg | KNN | SVM | LSTM |  DistilBert |
 | :--- | :---: | :---: | :---: | :---: | :---: |
 | **f1 macro avg**  | 0.90 | 0.92  | 0.92 | 0.91  | 0.96 |
-
 
 DistilBert comes out as the clear winner, with a notably higher score than the others, as befits the most technically advanced of all models used in this assignment.
