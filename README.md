@@ -26,9 +26,17 @@ With the previous preprocessing step complete, the entries in _"history_text"_ h
 
 ![wordcount_boxplot](https://github.com/jeroenvansweeveldt/Predicting_superhero_creators-machine_learning_exam_2023/assets/98675155/3cba0347-681a-4a0f-bf24-9eca25bc16d6)
 
-Inspired by the methodology from the research paper [Detecting Incongruity Between News Headline and Body Text via a Deep Hierarchical Encoder](https://arxiv.org/abs/1811.07066), and the [sliding window technique](https://www.geeksforgeeks.org/window-sliding-technique/), I decided to group the texts into chunks of maximum 512 words, as 512 tokens is the maximum length of a sequence BERT Transformers will accept. A condition was programmed to make sure that as soon as a sentence passes the 512 words treshold, the entire sentence would carry over to the next chunk, to avoid chunks ending (and starting) with incomplete sentences.
+Inspired by the methodology used in the research paper [Detecting Incongruity Between News Headline and Body Text via a Deep Hierarchical Encoder](https://arxiv.org/abs/1811.07066), and the [sliding window technique](https://www.geeksforgeeks.org/window-sliding-technique/), I decided to group the texts into chunks of maximum 512 words, as 512 tokens is the maximum length of a sequence BERT Transformers will accept. A condition was programmed to make sure that as soon as a sentence passes the 512 words treshold, the entire sentence would carry over to the next chunk, to avoid chunks ending (and starting) with incomplete sentences.
 
 Afterward, I split these chunks into separate data points. The rationale behind this workflow is this. Since we do not have to predict to which character a _"history_text"_ entry belongs, we do not have to worry about the individual's identity. Moreover, both DC and Marvel work with the concept of a multiverse, meaning that there exist multiple variations of the same character. As a result, the dataset already contained multiple entries for the same character even before preprocessing.
 
 The operation resulted in an expansion of the dataset from 1,085 data points to 2,317 data points. Better, but still insufficient to comfortably avert the risks of overfitting on the more powerful neural networks.
 
+### Weight balancing
+Marvel forms the majority class with 59.13% of labels, versus 40.87% labels assigned to DC.
+
+![class_balance_plot](https://github.com/jeroenvansweeveldt/Predicting_superhero_creators-machine_learning_exam_2023/assets/98675155/77e2f81d-c63d-4b6f-b9ef-fbb74656aa9d)
+
+To counter the data imbalance, I calculated the class weights the models could use for balancing, and thus produce more accurate results.
+
+## Training and results
