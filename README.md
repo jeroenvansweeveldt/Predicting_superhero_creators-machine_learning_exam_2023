@@ -10,6 +10,7 @@ The repository is structured as follows:
 * A Jupyter notebook containing the preparation, training, and evaluation of the classical models.
 * A Jupyter notebook containing the preparation, cross-validation, training, and evaluation of the LSTM model.
 * A Jupyter notebook containing the preparation, cross-validation, training, and evaluation of the DistilBert model.
+* A Jupyter notebook **utils** containing helper functions for the LSTM model. This was provided to us by our teacher, and expanded by me to make gradient clipping for the model possible.
 
 ## Disclaimer
 To all you fellow DTA students who stumble upon this repository and copied the workflow displayed here for your own exam assignment, know this: you are not supposed to know most of the techniques applied in these notebooks by the time you'll be tasked with the Machine Learning exam, so good luck and have fun explaining those when you'll be asked about them during the exam interview. :3
