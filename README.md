@@ -4,7 +4,7 @@ For the Machine Learning exam of UAntwerpen's MA of Digital Text Analysis, I was
 
 ## Structure
 The repository is structured as follows:
-* A map **data** containing the original and preprocessed datasets, a dataset called _"gremlins"_, featuring each word that produced gremlins in the original _"Superheroes"_ dataset, and datasets for each classifier used containing test data along with a column that displays whether the prediction was correct.
+* A map **data** containing the original and preprocessed datasets, a dataset called _"gremlins"_, featuring each word that produced gremlins in the original _"Superheroes"_ dataset, and datasets containing error analysis for each model experimented with.
 * A Jupyter notebook containing data exploration and preprocessing.
 * A Jupyter notebook containing the preparation, training, and evaluation of the classical models.
 * A Jupyter notebook containing the preparation, cross-validation, training, and evaluation of the LSTM model.
