@@ -12,7 +12,7 @@ The repository is structured as follows:
 * A Jupyter notebook **utils** containing helper functions for the LSTM model. This code was provided to us by our teacher, and extended by me to make gradient clipping for the model possible.
 
 ## Disclaimer
-To all you fellow DTA students who stumble upon this repository and copied the workflow displayed here for your own exam assignment, know this: you are not supposed to know most of the techniques applied in these notebooks by the time you'll be tasked with the Machine Learning exam, so good luck and have fun explaining those when you'll be asked about them during the exam interview. :3
+To all you fellow DTA students who stumble upon this repository and copied the workflow displayed here for your own exam assignment, know this: you are not supposed to know yet most of the techniques applied in these notebooks by the time you'll be tasked with the Machine Learning exam, so good luck and have fun explaining those when you're asked about it during the exam interview. :3
 
 ## The challenge
 With little over 1,000 relevant data points, we have a small dataset. Combined with the high-dimensionality of our feature space with a vocabulary of 54,210 unique words, we are at a high risk of overfitting the data. It is therefore desirable to limit the vocabulary so that the classifiers will be able to learn patterns from the data and generalise better. We can, however, nevertheless expect particular trouble when we are going to use complex models, i.e. deep learning models.
@@ -46,3 +46,4 @@ The machine learning models used for binary classification were _Logistic Regres
 | :--- | :---: | :---: | :---: | :---: | :---: |
 | **f1 macro avg**  | 0.90 | 0.92  | 0.92 | 0.91  | 0.96 |
 
+DistilBert comes out as the clear winner, with a notably higher score than the others, as befits the most technically advanced of all models used in this assignment.
